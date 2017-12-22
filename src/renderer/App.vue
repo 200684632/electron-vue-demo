@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <button @click="test">测试</button>
   </div>
 </template>
 
@@ -21,16 +20,13 @@ export default {
     
   },
   methods:{
-    test() {
-      this.$store.dispatch('user_load')
-    }
   },
   watch: {
     user_load(newVal, oldVal) {
       if(newVal) {
-        this.$router.push('/test')
-      }else{
         this.$router.push('/')
+      }else{
+        this.$router.push('/login')
       }
     }
   }
