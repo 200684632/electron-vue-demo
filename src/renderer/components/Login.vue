@@ -53,7 +53,7 @@ export default {
     },
     methods: {
       handleSubmit () {
-        this.$store.dispatch('user_load')
+        this.$router.push('/home')
       }
     }
 };
